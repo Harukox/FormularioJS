@@ -1,3 +1,11 @@
+function irFormulario() {
+    location.href="./formulario.html"
+}
+
+function volver() {
+    location.href="./index.html"
+}
+
 function validar() {
     let personas = document.forms["formulario"]["numeroP"].value;
     
