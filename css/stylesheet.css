@@ -2,15 +2,20 @@
     font-family:'mifuente';
     src: url(../fonts/HelpMe.ttf);
 }
-
+@font-face{
+    font-family:'GhoulFriAOE';
+    src: url(../fonts/GhoulFriAOE.ttf);
+}
 
 .formulario {
     background-image:url(../img/bosqueCuervo.png);
    height: 800px;
+   width: 100%;
     color: aliceblue;
+    background-repeat: no-repeat;
     
-
 }
+
 
 .titulo{
     font-size: 50pt;
@@ -30,4 +35,12 @@
 .datos label{
     text-align: left;
     width: 400px;
+}
+
+.subtituloPGP{
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family:"GhoulFriAOE";
+    font-size: 30pt;
 }
