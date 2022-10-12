@@ -1,0 +1,20 @@
+@font-face{
+    font-family:'mifuente';
+    src: url(../fonts/HelpMe.ttf);
+}
+
+
+.formulario {
+    background-image:url(../img/bosque.jpg);
+   height: 406px;
+    color: aliceblue;
+    size: ;
+
+}
+
+.titulo{
+    font-size: 50pt;
+    text-align: center;
+    font-family: 'mifuente';
+}
+
