@@ -66,7 +66,15 @@ align-items: center;
     
 }
 
-.submit{
+.textarea{
+    background: rgba(0, 0, 0, .4);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ff851b;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
     
 }
 .subtituloPGP{
