@@ -3,9 +3,14 @@
     src: url(../fonts/HelpMe.ttf);
 }
 
+
 @font-face{
     font-family:'stranger';
     src: url("../fonts/Stranger back in the Night.ttf");
+}
+@font-face{
+    font-family:'GhoulFriAOE';
+    src: url(../fonts/GhoulFriAOE.ttf);
 }
 body{
 background-image:url(../img/pueblo.jpg);
@@ -13,6 +18,11 @@ height: auto;
 width: 100%;
 align-items: center;
  color: aliceblue;
+
+
+
+
+
 }
 
 
@@ -35,6 +45,7 @@ align-items: center;
     font-size: 15pt;
    margin-left: 300px;
     width: 400px;
+
     border-color: black;
 }
 
@@ -48,5 +59,12 @@ align-items: center;
 .submit{
     margin-left: 300px;
     width: 300px;
-    
+}
+.subtituloPGP{
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family:"GhoulFriAOE";
+    font-size: 30pt;    
+
 }
