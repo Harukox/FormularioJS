@@ -9,39 +9,39 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <script type="text/javascript" src="js/validaciones.js"></script>
 </head>
-<body>
+<body class="fondo">
     <div class="formulario">
     <h1 class="titulo">SCREAM ROOM</h1>
      
     <form class="datos" name="formulario" method="get" action="resultado.html" onsubmit="return validar()">
-
+        <h4 class="fraseDatos">PARA EMPEZAR</h4>
         <p>
-            <label> ¿Cuántas personas vienen a pasar miedo?</label> 
-            <input type="number" required="true" name="numeroP">
+            <label> ¿Cuántas personas venís a pasar miedo?</label> 
+            <input class="texarea" type="number" required="true" name="numeroP" placeholder="Nº de participantes">
         </p>
         <p>
-            <label>¿Qué día no queréis volver a dormir?</label>
-            <input type="date">
+            <label>¿Cuándo empezarán vuestras pesadillas?</label>
+            <input  type="date" placeholder="Fecha del día que nunca olvidarás">
         </p>
 
 
 
-        <h4 class="fraseDatos">Datos del superviviente</h4>
+        <h4 class="fraseDatos">DATOS DEL SUPERVIVIENTE PRINCIPAL</h4>
         <p>
             <label>Nombre del mortal</label>
-            <input type="text" name="nombre">
+            <input class="texarea" type="text" name="nombre" placeholder="Tu nombre ">
         </p>
         <p>
             <label>Apellidos del mortal</label>
-            <input type="text" name="apellidos">
+            <input class="texarea" type="text" name="apellidos" placeholder="Tus apellidos">
         </p>
         <p>
             <label>Teléfono del mortal</label>
-            <input type="tel" name="telefono">
+            <input class="texarea" type="tel" name="telefono" placeholder="Teléfono de contacto">
         </p>
         <p>
             <label>Email del mortal</label>
-            <input type="email" name="email">
+            <input class="texarea" type="email" name="email" placeholder="Email de contacto">
         </p>
 
         <input class="submit" type="submit" value="Reservar el día de mi muerte">
