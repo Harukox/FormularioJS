@@ -20,6 +20,9 @@
 
 .fondo{
 background-image:url(../img/pueblo.jpg);
+background-size: cover;
+
+   
 height: auto;
 width: 100%;
 align-items: center;
@@ -67,11 +70,11 @@ align-items: center;
 }
 
 .textarea{
-    background: rgba(0, 0, 0, .4);
+    background: rgba(13, 12, 12, 0.68);
     border: none;
     outline: none;
-    border-bottom: 2px solid #ff851b;
-    width: 100%;
+    border-bottom: 2px solid rgba(73, 0, 0, 0.68);
+    width: 97%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
@@ -122,4 +125,32 @@ align-items: center;
     font-family: 'HelpMe';
     font-size: 25pt;
     color: aliceblue;
+}
+
+.submit{
+    
+    width: 100%;
+    font-family:'HelpMe';
+    outline: none;
+    background: rgba(73, 0, 0, 0.68);
+    font-size: 20pt;
+    color: rgba(255, 255, 255, 0.68) ;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.calendario{
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    background: rgba(13, 12, 12, 0.68);
+    font-size: 12pt;
+    color: rgba(255, 255, 255, 0.68) ;
+    padding: 15px 0;
+    
+   
+}
+
+.submit:hover{
+    background: rgba(216, 30, 30, 0.68);
 }
