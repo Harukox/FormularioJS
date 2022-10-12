@@ -26,14 +26,25 @@ align-items: center;
  color: aliceblue;
 
 }
-
+body{
+        color: aliceblue;
+    background-color: black;
+    margin: 0px;
+}
 
 .titulo{
     font-size: 100pt;
     text-align: center;
     font-family: 'HelpMe';
-    padding:70px;
+padding: 10px;
+margin: 0px;
+    text-shadow:2px 2px 0 rgb(0, 0, 0), 2px -2px rgb(0, 0, 0), -2px 2px rgb(0, 0, 0), -2px -2px rgb(0, 0, 0);
+    border-bottom: 2px solid white;
 
+
+}
+.cabecera{
+width: 100%;
 }
 
 .datos{
@@ -103,6 +114,7 @@ align-items: center;
     position: relative;
     padding: 30px;
     text-align: center;
+    background-color: rgb(0, 0, 0, .7);
 }
 
 .div-center li{
@@ -114,4 +126,16 @@ align-items: center;
     font-family: 'HelpMe';
     font-size: 25pt;
     color: aliceblue;
+}
+
+
+.resultado {
+    padding-top: 100px;
+    background-image:url(../img/cara.jpg);
+    background-size: 100%;
+   height: 800px;
+   width: 100%;
+    color: aliceblue;
+    background-repeat: no-repeat;
+    
 }
