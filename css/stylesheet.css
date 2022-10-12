@@ -6,14 +6,28 @@
 
 .formulario {
     background-image:url(../img/bosque.jpg);
-   height: 406px;
+   height: 800px;
     color: aliceblue;
-   
+    
+
 }
 
 .titulo{
     font-size: 50pt;
     text-align: center;
     font-family: 'mifuente';
+    padding:70px;
+   
+    
 }
 
+.datos{
+    text-align: center;
+    
+    padding: 20px;
+}
+
+.datos label{
+    text-align: left;
+    width: 400px;
+}
