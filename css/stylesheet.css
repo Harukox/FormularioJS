@@ -18,21 +18,34 @@
     src: url(../fonts/HororDramaDemoRegular.ttf);
 }
 
-.fondo{
-background-image:url(../img/pueblo.jpg);
-background-size: cover;
 
-   
-height: auto;
-width: 100%;
-align-items: center;
- color: aliceblue;
 
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-height: 100%;
+    background: #1c1c1c;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+
 body{
         color: aliceblue;
     background-color: black;
     margin: 0px;
+    z-index: -1;
 }
 
 .titulo{
