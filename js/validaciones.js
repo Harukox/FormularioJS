@@ -161,7 +161,7 @@ function datosReserva(mapa){
     let dni =mapa["dni"];
     let telefono =mapa["telefono"];
     let email =mapa["email"];
-
+//mostrar los datos en la página resultado.
     document.write("<p> <b>Nombre: </b> " +  nombre.replaceAll("+", " ")+ "</p>");
     document.write("<p> <b>Apellido: </b> " +  apellido.replaceAll("+", " ") + "</p>");
     document.write("<p> <b>DNI: </b> " +  dni + "</p>");
