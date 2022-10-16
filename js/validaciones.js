@@ -124,3 +124,48 @@ function validar() {
     
 }
 
+
+/**
+* Funcion que captura las variables pasados por GET
+* Devuelve un array de clave=>valor
+*/
+function getParametrosUrl()
+{
+    // capturamos la url
+    var url = document.location.href;
+    // si existe el interrogante
+    if(url.indexOf('?')>0)
+    {
+        // cogemos la parte de la url que hay despues del interrogante
+        var parametros = url.split('?')[1];
+        // obtenemos un array con cada clave=valor
+        var arrayParametros = parametros.split('&');
+        var mapa = {};
+        // recorremos todo el array de valores
+        for(var i = 0; i < arrayParametros.length; i++){
+            var param = arrayParametros[i].split('=');
+            mapa[param[0]] =unescape (decodeURI(param[1]));
+        }
+        return mapa;
+    }
+}
+
+function datosReserva(mapa){
+    //recogemos los valores que nos envia la URL en variables para trabajar con ellas
+
+    let personas = mapa["numeroP"];
+    let fecha = mapa["fecha"];
+    let nombre = mapa["nombre"];
+    let apellido =mapa["apellidos"];
+    let dni =mapa["dni"];
+    let telefono =mapa["telefono"];
+    let email =mapa["email"];
+
+    document.write("<b>Nombre: </b> " +  nombre + "<p>");
+    document.write("<b>Apellido: </b> " +  apellido + "<p>");
+    document.write("<b>DNI: </b> " +  dni + "<p>");
+    document.write("<b>Teléfono: </b> " +  telefono + "<p>");
+    document.write("<b>email: </b> " +  email + "<p>");
+    document.write("<b>Número de mortales: </b>" +  personas);
+}
+
