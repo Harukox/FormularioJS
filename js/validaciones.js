@@ -1,4 +1,4 @@
-/* funciones para navegar */
+// funciones para navegar 
 
 function irFormulario() {
     location.href="./formulario.html"
@@ -24,15 +24,13 @@ function validarPersonas(personas) {
 }
 //funcion para validar las fechas.
 function validarFecha(fecha){
+ // fecha de hoy. 
+    
+    const hoy = new Date();
+    const fechaFormulario =new Date(fecha);
 
 
-var ano = document.getElementById("ano").value;
-var mes = document.getElementById("mes").value;
-var dia = document.getElementById("dia").value;
-
-valor = new Date(ano, mes, dia);
-
-if( isNaN(valor) ) {
+if(fechaFormulario >= hoy ) {
   return true;
 } else{
 
@@ -88,8 +86,8 @@ function validarDNI(dni) {
 
 //funcion para validar el telefono y que se introduzca un valor valido
 function validarTelefono(telefono){
-
-    if( (/^\d{9}$/.test(telefono)) ) {
+    var expresion =/^\d{9}$/ ;
+    if(expresion.test(telefono))  {
       return true;
     }else{
         alert("introduce un telefono valido");
@@ -99,14 +97,13 @@ function validarTelefono(telefono){
 }
 // funcion para validar el email  para que se introduzcan valores validos.
 function validarEmail(email){
-
-    valorEmail = document.getElementById("campo").value;
-if( (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
-  return false;
-}else{
-    alert("ingrese un email valido");
-    return false;
-}
+    var expresion =  /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/ ;
+    if(expresion.test(email)  ) {
+        return true;
+    }else{
+        alert("ingrese un email valido");
+        return false;
+    }
 }
 
 //funcion para validar todos los campos. 
