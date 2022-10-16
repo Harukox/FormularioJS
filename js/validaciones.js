@@ -156,16 +156,18 @@ function datosReserva(mapa){
     let personas = mapa["numeroP"];
     let fecha = mapa["fecha"];
     let nombre = mapa["nombre"];
+    
     let apellido =mapa["apellidos"];
     let dni =mapa["dni"];
     let telefono =mapa["telefono"];
     let email =mapa["email"];
 
-    document.write("<b>Nombre: </b> " +  nombre + "<p>");
-    document.write("<b>Apellido: </b> " +  apellido + "<p>");
-    document.write("<b>DNI: </b> " +  dni + "<p>");
-    document.write("<b>Teléfono: </b> " +  telefono + "<p>");
-    document.write("<b>email: </b> " +  email + "<p>");
-    document.write("<b>Número de mortales: </b>" +  personas);
+    document.write("<p> <b>Nombre: </b> " +  nombre.replaceAll("+", " ")+ "</p>");
+    document.write("<p> <b>Apellido: </b> " +  apellido.replaceAll("+", " ") + "</p>");
+    document.write("<p> <b>DNI: </b> " +  dni + "</p>");
+    document.write("<p> <b>Teléfono: </b> " +  telefono + "</p>");
+    document.write("<p> <b>email: </b> " +  email + "</p>");
+    document.write("<p> <b>Número de mortales: </b>" +  personas +"</p>");
+    document.write("<p> <b>Para el día: </b>" +  fecha + "</p>");
 }
 
