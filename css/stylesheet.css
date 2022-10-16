@@ -20,7 +20,7 @@
 
 
 
-video {
+.video {
     position: fixed;
     top: 0;
     left: 0;
@@ -60,6 +60,9 @@ margin: 0px;
 
 }
 .cabecera{
+    background: url(../img/bannerOscuro.jpg) no-repeat;
+    background-size: 2000px;
+    
 width: 100%;
 background-color: rgb(0, 0, 0);
 }
@@ -107,16 +110,16 @@ background-color: rgb(0, 0, 0);
     
 }
 .subtituloPGP{
-
+    font-family:'GhoulFriAOE';
     text-align: center;
     text-transform: uppercase;
-    font-family:"GhoulFriAOE";
-    font-size: 30pt;    
+    font-size: 30pt;   
+    color: rgba(216, 30, 30);
 
 }
 
 .paginaP {
-
+    position: relative;
     background-image:url(../img/pasillito.jpg);
 
     background-size: 100%;
@@ -143,7 +146,18 @@ background-color: rgb(0, 0, 0);
 
 
 .div-center {
-    width: 40%;
+    font-family:'GhoulFriAOE';
+    font-size: 35px;
+    width: 90%;
+    margin: auto; 
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(0, 0, 0, .4);
+}
+
+.div-center-texto{
+    width: 50%;
     margin: auto; 
     position: relative;
     padding: 30px;
@@ -162,11 +176,7 @@ background-color: rgb(0, 0, 0);
     color: aliceblue;
 }
 
-
-
-
-
-.submit{
+.submitFormulario{
     
     width: 100%;
     font-family:'HelpMe';
@@ -176,8 +186,22 @@ background-color: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 0.68) ;
     padding: 15px 0;
     cursor: pointer;
-    transition: all .5s ease;
+    transition: all .7s ease;
+
 }
+
+.submitIndex{
+    width: 15%;
+    font-family:'HelpMe';
+    outline: none;
+    background: rgba(73, 0, 0, 0.68);
+    font-size: 20pt;
+    color: rgba(255, 255, 255, 0.68) ;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
 .calendario{
     width: 100%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -192,7 +216,21 @@ background-color: rgb(0, 0, 0);
     border-bottom: 2px solid rgba(73, 0, 0, 0.68);
 }
 
-.submit:hover{
+.submitFormulario:hover{
+    background: rgba(216, 30, 30, 0.68);
+}
+.submitIndex:hover{
     background: rgba(216, 30, 30, 0.68);
 }
 
+.letraPequeña{
+font-size: 25px;
+}
+
+footer{
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    font-family:'GhoulFriAOE';
+    font-size: 18px;
+}
