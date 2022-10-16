@@ -40,23 +40,23 @@ if(fechaFormulario >= hoy ) {
     
 }
 //funcion para validar el nombre y el apellido que no se puedan ingresar otro tipo de caracteres
-function validarTexto(texto){
+function validarTexto(texto, valor){
 //expresion regular para los caracteres.
-var expresionR =  / ^ [a-zA-Z] + [a-zA-Z] + $ / ;
+var expresionR = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/
 
 if(expresionR.test(texto)){
 
     return true;
 
 }else{
-    alert("introduce un texto valido");
+    alert("introduce un " + valor + " valido");
     return false;
 }
 }
 
 
 //funcion para validar el dni, y que sea un dni valido.
-function validarDNI(dni) {
+/*function validarDNI(dni) {
     var numero, let, letra;
     var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
 
@@ -72,17 +72,45 @@ function validarDNI(dni) {
         letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
         letra = letra.substring(numero, numero+1);
         if (letra != let) {
-            //alert('Dni erroneo, la letra del NIF no se corresponde');
+            alert('Dni erroneo, la letra del NIF no se corresponde');
             return false;
         }else{
             //alert('Dni correcto');
             return true;
         }
     }else{
-        //alert('Dni erroneo, formato no válido');
+        alert('Dni erroneo, formato no válido');
         return false;
     }
-}
+}*/
+
+
+function nif(dni) {
+    var numero
+    var letr
+    var letra
+    var expresion_regular_dni
+   
+    expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+   
+    if(expresion_regular_dni.test (dni) == true){
+       numero = dni.substr(0,dni.length-1);
+       letr = dni.substr(dni.length-1,1);
+       numero = numero % 23;
+       letra='TRWAGMYFPDXBNJZSQVHLCKET';
+       letra=letra.substring(numero,numero+1);
+      if (letra!=letr.toUpperCase()) {
+         alert('Dni erroneo, la letra del DNI no se corresponde');
+       }else{
+         alert('Dni correcto');
+       }
+    }else{
+       alert('Dni erroneo, formato no válido');
+     }
+  }
+
+
+
 
 //funcion para validar el telefono y que se introduzca un valor valido
 function validarTelefono(telefono){
@@ -97,7 +125,7 @@ function validarTelefono(telefono){
 }
 // funcion para validar el email  para que se introduzcan valores validos.
 function validarEmail(email){
-    var expresion =  /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/ ;
+    var expresion = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i ;
     if(expresion.test(email)  ) {
         return true;
     }else{
@@ -117,7 +145,7 @@ function validar() {
     let email =document.forms["formulario"]["email"].value;
     
     
-    return validarTexto(nombre) && validarTexto(apellido) &&
+    return validarTexto(nombre, "nombre") && validarTexto(apellido, "apellido") &&
     validarDNI(dni) && validarPersonas(personas) && validarEmail(email) && 
     validarTelefono(telefono) && validarFecha(fecha);
 
