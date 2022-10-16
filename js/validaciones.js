@@ -1,11 +1,11 @@
 // funciones para navegar 
 
 function irFormulario() {
-    location.href="./formulario.html"
+    location.href="./formulario.html";
 }
 
 function volver() {
-    location.href="./index.html"
+    location.href="./index.html";
 }
 
 
@@ -30,62 +30,32 @@ function validarFecha(fecha){
     const fechaFormulario =new Date(fecha);
 
 
-if(fechaFormulario >= hoy ) {
-  return true;
-} else{
+    if(fechaFormulario >= hoy ) {
+        return true;
+    } else{
 
-    alert("introduce una fecha valida");
-    return false;
-}
+        alert("introduce una fecha valida");
+        return false;
+    }
     
 }
 //funcion para validar el nombre y el apellido que no se puedan ingresar otro tipo de caracteres
 function validarTexto(texto, valor){
-//expresion regular para los caracteres.
-var expresionR = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/
+    //expresion regular para los caracteres.
+    var expresionR = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/
 
-if(expresionR.test(texto)){
+    if(expresionR.test(texto)){
 
-    return true;
+        return true;
 
-}else{
-    alert("introduce un " + valor + " valido");
-    return false;
-}
-}
-
-
-//funcion para validar el dni, y que sea un dni valido.
-/*function validarDNI(dni) {
-    var numero, let, letra;
-    var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
-
-    dni = dni.toUpperCase();
-
-    if(expresion_regular_dni.test(dni) === true){
-        numero = dni.substr(0,dni.length-1);
-        numero = numero.replace('X', 0);
-        numero = numero.replace('Y', 1);
-        numero = numero.replace('Z', 2);
-        let = dni.substr(dni.length-1, 1);
-        numero = numero % 23;
-        letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
-        letra = letra.substring(numero, numero+1);
-        if (letra != let) {
-            alert('Dni erroneo, la letra del NIF no se corresponde');
-            return false;
-        }else{
-            //alert('Dni correcto');
-            return true;
-        }
     }else{
-        alert('Dni erroneo, formato no válido');
+        alert("introduce un " + valor + " valido");
         return false;
     }
-}*/
+}
 
 
-function nif(dni) {
+function validarDNI(dni) {
     var numero
     var letr
     var letra
@@ -100,12 +70,14 @@ function nif(dni) {
        letra='TRWAGMYFPDXBNJZSQVHLCKET';
        letra=letra.substring(numero,numero+1);
       if (letra!=letr.toUpperCase()) {
-         alert('Dni erroneo, la letra del DNI no se corresponde');
+            alert('Dni erroneo, la letra del DNI no se corresponde');
+            return false;
        }else{
-         alert('Dni correcto');
+            return true;
        }
     }else{
        alert('Dni erroneo, formato no válido');
+       return false;
      }
   }
 
