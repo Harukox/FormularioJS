@@ -32,8 +32,12 @@ var dia = document.getElementById("dia").value;
 
 valor = new Date(ano, mes, dia);
 
-if( !isNaN(valor) ) {
-  return false;
+if( isNaN(valor) ) {
+  return true;
+} else{
+
+    alert("introduce una fecha valida");
+    return false;
 }
     
 }
@@ -54,7 +58,7 @@ if(expresionR.test(texto)){
 
 
 //funcion para validar el dni, y que sea un dni valido.
-function validateDNI(dni) {
+function validarDNI(dni) {
     var numero, let, letra;
     var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
 
@@ -89,6 +93,7 @@ function validarTelefono(telefono){
       return true;
     }else{
         alert("introduce un telefono valido");
+        return false;
     }
 
 }
@@ -96,8 +101,11 @@ function validarTelefono(telefono){
 function validarEmail(email){
 
     valorEmail = document.getElementById("campo").value;
-if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
+if( (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
   return false;
+}else{
+    alert("ingrese un email valido");
+    return false;
 }
 }
 
@@ -113,7 +121,7 @@ function validar() {
     
     
     return validarTexto(nombre) && validarTexto(apellido) &&
-    validateDNI(dni) && validarPersonas(personas) && validarEmail(email) && 
+    validarDNI(dni) && validarPersonas(personas) && validarEmail(email) && 
     validarTelefono(telefono) && validarFecha(fecha);
 
     
