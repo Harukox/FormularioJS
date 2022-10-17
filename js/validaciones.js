@@ -142,9 +142,17 @@ function getParametrosUrl()
         var arrayParametros = parametros.split('&');
         var mapa = {};
         // recorremos todo el array de valores
-        for(var i = 0; i < arrayParametros.length; i++){
-            var param = arrayParametros[i].split('=');
-            mapa[param[0]] =unescape (decodeURI(param[1]));
+        for(let i = 0; i < arrayParametros.length; i++){
+            let param = arrayParametros[i].split('=');
+            
+            let clave, valor;
+            clave = param[0];
+            valor = param[1]
+            //decodeURIComponent para que salgan  los arrobas y los acentos
+            mapa[clave] =  decodeURIComponent(valor); 
+            
+            // LA FUNCION UNESCAPEESTÁ DEPRECADA 
+            //mapa[param[0]] =unescape (decodeURI(param[1])); 
         }
         return mapa;
     }
